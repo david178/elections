@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1894057-1171-41DE-9847-F9BF72CDF623}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ElectionResults</RootNamespace>
+    <AssemblyName>ElectionResults</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ElectionResults.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ElectionResults.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EPM\EPM\packages\AjaxControlToolkit.7.123\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\img_icons\imgbg.jpg" />
+    <Content Include="css\img_icons\ajax-loader.gif" />
+    <Content Include="css\img_icons\gtk-close.png" />
+    <Content Include="css\img_icons\site-bg.gif" />
+    <Content Include="css\img_icons\testicon.ico" />
+    <Content Include="css\img_icons\votingBadge.jpg" />
+    <Content Include="css\img_icons\votingBadgeRev.png" />
+    <Content Include="css\img_icons\votingBadgeRev2.png" />
+    <Content Include="css\img_icons\votingBadgeRev3.png" />
+    <Content Include="css\img_icons\votingBadgeRev4.png" />
+    <Content Include="css\landing-page.css" />
+    <Content Include="css\mediaQueries.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\webcheck.png" />
+    <Content Include="ENR-BACKUP.aspx" />
+    <Content Include="EVTurnout_DataFile.aspx" />
+    <Content Include="ENR_Web.aspx" />
+    <Content Include="ENR_FIL.aspx" />
+    <Content Include="EVTurnout_FIL.aspx" />
+    <Content Include="EV_TurnoutFiles.aspx" />
+    <Content Include="Images\print_ver.gif" />
+    <Content Include="Images\wait_animated.gif" />
+    <Content Include="js\app.js" />
+    <Content Include="js\controller.js" />
+    <Content Include="js\extra.htm" />
+    <Content Include="js\lib\bootstrap.js" />
+    <Content Include="js\lib\bootstrap.min.js" />
+    <Content Include="js\muniSwitch.js" />
+    <Content Include="js\persist.js" />
+    <Content Include="js\scrollButton.js" />
+    <Content Include="js\timeStamp.js" />
+    <Content Include="lander.html" />
+    <Content Include="resources\dem_pngs\0.png" />
+    <Content Include="resources\dem_pngs\1.png" />
+    <Content Include="resources\dem_pngs\10.png" />
+    <Content Include="resources\dem_pngs\100.png" />
+    <Content Include="resources\dem_pngs\11.png" />
+    <Content Include="resources\dem_pngs\12.png" />
+    <Content Include="resources\dem_pngs\13.png" />
+    <Content Include="resources\dem_pngs\14.png" />
+    <Content Include="resources\dem_pngs\15.png" />
+    <Content Include="resources\dem_pngs\16.png" />
+    <Content Include="resources\dem_pngs\17.png" />
+    <Content Include="resources\dem_pngs\18.png" />
+    <Content Include="resources\dem_pngs\19.png" />
+    <Content Include="resources\dem_pngs\2.png" />
+    <Content Include="resources\dem_pngs\20.png" />
+    <Content Include="resources\dem_pngs\21.png" />
+    <Content Include="resources\dem_pngs\22.png" />
+    <Content Include="resources\dem_pngs\23.png" />
+    <Content Include="resources\dem_pngs\24.png" />
+    <Content Include="resources\dem_pngs\25.png" />
+    <Content Include="resources\dem_pngs\26.png" />
+    <Content Include="resources\dem_pngs\27.png" />
+    <Content Include="resources\dem_pngs\28.png" />
+    <Content Include="resources\dem_pngs\29.png" />
+    <Content Include="resources\dem_pngs\3.png" />
+    <Content Include="resources\dem_pngs\30.png" />
+    <Content Include="resources\dem_pngs\31.png" />
+    <Content Include="resources\dem_pngs\32.png" />
+    <Content Include="resources\dem_pngs\33.png" />
+    <Content Include="resources\dem_pngs\34.png" />
+    <Content Include="resources\dem_pngs\35.png" />
+    <Content Include="resources\dem_pngs\36.png" />
+    <Content Include="resources\dem_pngs\37.png" />
+    <Content Include="resources\dem_pngs\38.png" />
+    <Content Include="resources\dem_pngs\39.png" />
+    <Content Include="resources\dem_pngs\4.png" />
+    <Content Include="resources\dem_pngs\40.png" />
+    <Content Include="resources\dem_pngs\41.png" />
+    <Content Include="resources\dem_pngs\42.png" />
+    <Content Include="resources\dem_pngs\43.png" />
+    <Content Include="resources\dem_pngs\44.png" />
+    <Content Include="resources\dem_pngs\45.png" />
+    <Content Include="resources\dem_pngs\46.png" />
+    <Content Include="resources\dem_pngs\47.png" />
+    <Content Include="resources\dem_pngs\48.png" />
+    <Content Include="resources\dem_pngs\49.png" />
+    <Content Include="resources\dem_pngs\5.png" />
+    <Content Include="resources\dem_pngs\50.png" />
+    <Content Include="resources\dem_pngs\51.png" />
+    <Content Include="resources\dem_pngs\52.png" />
+    <Content Include="resources\dem_pngs\53.png" />
+    <Content Include="resources\dem_pngs\54.png" />
+    <Content Include="resources\dem_pngs\55.png" />
+    <Content Include="resources\dem_pngs\56.png" />
+    <Content Include="resources\dem_pngs\57.png" />
+    <Content Include="resources\dem_pngs\58.png" />
+    <Content Include="resources\dem_pngs\59.png" />
+    <Content Include="resources\dem_pngs\6.png" />
+    <Content Include="resources\dem_pngs\60.png" />
+    <Content Include="resources\dem_pngs\61.png" />
+    <Content Include="resources\dem_pngs\62.png" />
+    <Content Include="resources\dem_pngs\63.png" />
+    <Content Include="resources\dem_pngs\64.png" />
+    <Content Include="resources\dem_pngs\65.png" />
+    <Content Include="resources\dem_pngs\66.png" />
+    <Content Include="resources\dem_pngs\67.png" />
+    <Content Include="resources\dem_pngs\68.png" />
+    <Content Include="resources\dem_pngs\69.png" />
+    <Content Include="resources\dem_pngs\7.png" />
+    <Content Include="resources\dem_pngs\70.png" />
+    <Content Include="resources\dem_pngs\71.png" />
+    <Content Include="resources\dem_pngs\72.png" />
+    <Content Include="resources\dem_pngs\73.png" />
+    <Content Include="resources\dem_pngs\74.png" />
+    <Content Include="resources\dem_pngs\75.png" />
+    <Content Include="resources\dem_pngs\76.png" />
+    <Content Include="resources\dem_pngs\77.png" />
+    <Content Include="resources\dem_pngs\78.png" />
+    <Content Include="resources\dem_pngs\79.png" />
+    <Content Include="resources\dem_pngs\8.png" />
+    <Content Include="resources\dem_pngs\80.png" />
+    <Content Include="resources\dem_pngs\81.png" />
+    <Content Include="resources\dem_pngs\82.png" />
+    <Content Include="resources\dem_pngs\83.png" />
+    <Content Include="resources\dem_pngs\84.png" />
+    <Content Include="resources\dem_pngs\85.png" />
+    <Content Include="resources\dem_pngs\86.png" />
+    <Content Include="resources\dem_pngs\87.png" />
+    <Content Include="resources\dem_pngs\88.png" />
+    <Content Include="resources\dem_pngs\89.png" />
+    <Content Include="resources\dem_pngs\9.png" />
+    <Content Include="resources\dem_pngs\90.png" />
+    <Content Include="resources\dem_pngs\91.png" />
+    <Content Include="resources\dem_pngs\92.png" />
+    <Content Include="resources\dem_pngs\93.png" />
+    <Content Include="resources\dem_pngs\94.png" />
+    <Content Include="resources\dem_pngs\95.png" />
+    <Content Include="resources\dem_pngs\96.png" />
+    <Content Include="resources\dem_pngs\97.png" />
+    <Content Include="resources\dem_pngs\98.png" />
+    <Content Include="resources\dem_pngs\99.png" />
+    <Content Include="resources\img_icons\brightened2ico.ico" />
+    <Content Include="resources\img_icons\webcheck.png" />
+    <Content Include="resources\pngs\0.png" />
+    <Content Include="resources\pngs\1.png" />
+    <Content Include="resources\pngs\10.png" />
+    <Content Include="resources\pngs\100.png" />
+    <Content Include="resources\pngs\11.png" />
+    <Content Include="resources\pngs\12.png" />
+    <Content Include="resources\pngs\13.png" />
+    <Content Include="resources\pngs\14.png" />
+    <Content Include="resources\pngs\15.png" />
+    <Content Include="resources\pngs\16.png" />
+    <Content Include="resources\pngs\17.png" />
+    <Content Include="resources\pngs\18.png" />
+    <Content Include="resources\pngs\19.png" />
+    <Content Include="resources\pngs\2.png" />
+    <Content Include="resources\pngs\20.png" />
+    <Content Include="resources\pngs\21.png" />
+    <Content Include="resources\pngs\22.png" />
+    <Content Include="resources\pngs\23.png" />
+    <Content Include="resources\pngs\24.png" />
+    <Content Include="resources\pngs\25.png" />
+    <Content Include="resources\pngs\26.png" />
+    <Content Include="resources\pngs\27.png" />
+    <Content Include="resources\pngs\28.png" />
+    <Content Include="resources\pngs\29.png" />
+    <Content Include="resources\pngs\3.png" />
+    <Content Include="resources\pngs\30.png" />
+    <Content Include="resources\pngs\31.png" />
+    <Content Include="resources\pngs\32.png" />
+    <Content Include="resources\pngs\33.png" />
+    <Content Include="resources\pngs\34.png" />
+    <Content Include="resources\pngs\35.png" />
+    <Content Include="resources\pngs\36.png" />
+    <Content Include="resources\pngs\37.png" />
+    <Content Include="resources\pngs\38.png" />
+    <Content Include="resources\pngs\39.png" />
+    <Content Include="resources\pngs\4.png" />
+    <Content Include="resources\pngs\40.png" />
+    <Content Include="resources\pngs\41.png" />
+    <Content Include="resources\pngs\42.png" />
+    <Content Include="resources\pngs\43.png" />
+    <Content Include="resources\pngs\44.png" />
+    <Content Include="resources\pngs\45.png" />
+    <Content Include="resources\pngs\46.png" />
+    <Content Include="resources\pngs\47.png" />
+    <Content Include="resources\pngs\48.png" />
+    <Content Include="resources\pngs\49.png" />
+    <Content Include="resources\pngs\5.png" />
+    <Content Include="resources\pngs\50.png" />
+    <Content Include="resources\pngs\51.png" />
+    <Content Include="resources\pngs\52.png" />
+    <Content Include="resources\pngs\53.png" />
+    <Content Include="resources\pngs\54.png" />
+    <Content Include="resources\pngs\55.png" />
+    <Content Include="resources\pngs\56.png" />
+    <Content Include="resources\pngs\57.png" />
+    <Content Include="resources\pngs\58.png" />
+    <Content Include="resources\pngs\59.png" />
+    <Content Include="resources\pngs\6.png" />
+    <Content Include="resources\pngs\60.png" />
+    <Content Include="resources\pngs\61.png" />
+    <Content Include="resources\pngs\62.png" />
+    <Content Include="resources\pngs\63.png" />
+    <Content Include="resources\pngs\64.png" />
+    <Content Include="resources\pngs\65.png" />
+    <Content Include="resources\pngs\66.png" />
+    <Content Include="resources\pngs\67.png" />
+    <Content Include="resources\pngs\68.png" />
+    <Content Include="resources\pngs\69.png" />
+    <Content Include="resources\pngs\7.png" />
+    <Content Include="resources\pngs\70.png" />
+    <Content Include="resources\pngs\71.png" />
+    <Content Include="resources\pngs\72.png" />
+    <Content Include="resources\pngs\73.png" />
+    <Content Include="resources\pngs\74.png" />
+    <Content Include="resources\pngs\75.png" />
+    <Content Include="resources\pngs\76.png" />
+    <Content Include="resources\pngs\77.png" />
+    <Content Include="resources\pngs\78.png" />
+    <Content Include="resources\pngs\79.png" />
+    <Content Include="resources\pngs\8.png" />
+    <Content Include="resources\pngs\80.png" />
+    <Content Include="resources\pngs\81.png" />
+    <Content Include="resources\pngs\82.png" />
+    <Content Include="resources\pngs\83.png" />
+    <Content Include="resources\pngs\84.png" />
+    <Content Include="resources\pngs\85.png" />
+    <Content Include="resources\pngs\86.png" />
+    <Content Include="resources\pngs\87.png" />
+    <Content Include="resources\pngs\88.png" />
+    <Content Include="resources\pngs\89.png" />
+    <Content Include="resources\pngs\9.png" />
+    <Content Include="resources\pngs\90.png" />
+    <Content Include="resources\pngs\91.png" />
+    <Content Include="resources\pngs\92.png" />
+    <Content Include="resources\pngs\93.png" />
+    <Content Include="resources\pngs\94.png" />
+    <Content Include="resources\pngs\95.png" />
+    <Content Include="resources\pngs\96.png" />
+    <Content Include="resources\pngs\97.png" />
+    <Content Include="resources\pngs\98.png" />
+    <Content Include="resources\pngs\99.png" />
+    <Content Include="resources\rep_pngs\0.png" />
+    <Content Include="resources\rep_pngs\1.png" />
+    <Content Include="resources\rep_pngs\10.png" />
+    <Content Include="resources\rep_pngs\100.png" />
+    <Content Include="resources\rep_pngs\11.png" />
+    <Content Include="resources\rep_pngs\12.png" />
+    <Content Include="resources\rep_pngs\13.png" />
+    <Content Include="resources\rep_pngs\14.png" />
+    <Content Include="resources\rep_pngs\15.png" />
+    <Content Include="resources\rep_pngs\16.png" />
+    <Content Include="resources\rep_pngs\17.png" />
+    <Content Include="resources\rep_pngs\18.png" />
+    <Content Include="resources\rep_pngs\19.png" />
+    <Content Include="resources\rep_pngs\2.png" />
+    <Content Include="resources\rep_pngs\20.png" />
+    <Content Include="resources\rep_pngs\21.png" />
+    <Content Include="resources\rep_pngs\22.png" />
+    <Content Include="resources\rep_pngs\23.png" />
+    <Content Include="resources\rep_pngs\24.png" />
+    <Content Include="resources\rep_pngs\25.png" />
+    <Content Include="resources\rep_pngs\26.png" />
+    <Content Include="resources\rep_pngs\27.png" />
+    <Content Include="resources\rep_pngs\28.png" />
+    <Content Include="resources\rep_pngs\29.png" />
+    <Content Include="resources\rep_pngs\3.png" />
+    <Content Include="resources\rep_pngs\30.png" />
+    <Content Include="resources\rep_pngs\31.png" />
+    <Content Include="resources\rep_pngs\32.png" />
+    <Content Include="resources\rep_pngs\33.png" />
+    <Content Include="resources\rep_pngs\34.png" />
+    <Content Include="resources\rep_pngs\35.png" />
+    <Content Include="resources\rep_pngs\36.png" />
+    <Content Include="resources\rep_pngs\37.png" />
+    <Content Include="resources\rep_pngs\38.png" />
+    <Content Include="resources\rep_pngs\39.png" />
+    <Content Include="resources\rep_pngs\4.png" />
+    <Content Include="resources\rep_pngs\40.png" />
+    <Content Include="resources\rep_pngs\41.png" />
+    <Content Include="resources\rep_pngs\42.png" />
+    <Content Include="resources\rep_pngs\43.png" />
+    <Content Include="resources\rep_pngs\44.png" />
+    <Content Include="resources\rep_pngs\45.png" />
+    <Content Include="resources\rep_pngs\46.png" />
+    <Content Include="resources\rep_pngs\47.png" />
+    <Content Include="resources\rep_pngs\48.png" />
+    <Content Include="resources\rep_pngs\49.png" />
+    <Content Include="resources\rep_pngs\5.png" />
+    <Content Include="resources\rep_pngs\50.png" />
+    <Content Include="resources\rep_pngs\51.png" />
+    <Content Include="resources\rep_pngs\52.png" />
+    <Content Include="resources\rep_pngs\53.png" />
+    <Content Include="resources\rep_pngs\54.png" />
+    <Content Include="resources\rep_pngs\55.png" />
+    <Content Include="resources\rep_pngs\56.png" />
+    <Content Include="resources\rep_pngs\57.png" />
+    <Content Include="resources\rep_pngs\58.png" />
+    <Content Include="resources\rep_pngs\59.png" />
+    <Content Include="resources\rep_pngs\6.png" />
+    <Content Include="resources\rep_pngs\60.png" />
+    <Content Include="resources\rep_pngs\61.png" />
+    <Content Include="resources\rep_pngs\62.png" />
+    <Content Include="resources\rep_pngs\63.png" />
+    <Content Include="resources\rep_pngs\64.png" />
+    <Content Include="resources\rep_pngs\65.png" />
+    <Content Include="resources\rep_pngs\66.png" />
+    <Content Include="resources\rep_pngs\67.png" />
+    <Content Include="resources\rep_pngs\68.png" />
+    <Content Include="resources\rep_pngs\69.png" />
+    <Content Include="resources\rep_pngs\7.png" />
+    <Content Include="resources\rep_pngs\70.png" />
+    <Content Include="resources\rep_pngs\71.png" />
+    <Content Include="resources\rep_pngs\72.png" />
+    <Content Include="resources\rep_pngs\73.png" />
+    <Content Include="resources\rep_pngs\74.png" />
+    <Content Include="resources\rep_pngs\75.png" />
+    <Content Include="resources\rep_pngs\76.png" />
+    <Content Include="resources\rep_pngs\77.png" />
+    <Content Include="resources\rep_pngs\78.png" />
+    <Content Include="resources\rep_pngs\79.png" />
+    <Content Include="resources\rep_pngs\8.png" />
+    <Content Include="resources\rep_pngs\80.png" />
+    <Content Include="resources\rep_pngs\81.png" />
+    <Content Include="resources\rep_pngs\82.png" />
+    <Content Include="resources\rep_pngs\83.png" />
+    <Content Include="resources\rep_pngs\84.png" />
+    <Content Include="resources\rep_pngs\85.png" />
+    <Content Include="resources\rep_pngs\86.png" />
+    <Content Include="resources\rep_pngs\87.png" />
+    <Content Include="resources\rep_pngs\88.png" />
+    <Content Include="resources\rep_pngs\89.png" />
+    <Content Include="resources\rep_pngs\9.png" />
+    <Content Include="resources\rep_pngs\90.png" />
+    <Content Include="resources\rep_pngs\91.png" />
+    <Content Include="resources\rep_pngs\92.png" />
+    <Content Include="resources\rep_pngs\93.png" />
+    <Content Include="resources\rep_pngs\94.png" />
+    <Content Include="resources\rep_pngs\95.png" />
+    <Content Include="resources\rep_pngs\96.png" />
+    <Content Include="resources\rep_pngs\97.png" />
+    <Content Include="resources\rep_pngs\98.png" />
+    <Content Include="resources\rep_pngs\99.png" />
+    <Content Include="SOV.aspx" />
+    <Content Include="SOV_sp.aspx" />
+    <Content Include="StyleSheet_TV.css" />
+    <Content Include="ENR_TV.aspx" />
+    <Content Include="ENR.aspx" />
+    <Content Include="ENR_SP.aspx" />
+    <Content Include="Results_pv.aspx" />
+    <Content Include="graph.ascx" />
+    <Content Include="GenerateImage.aspx" />
+    <Content Include="Results.aspx" />
+    <Content Include="PrintStyle.css" />
+    <Content Include="error.aspx" />
+    <Content Include="EVTurnout_SP.aspx" />
+    <Content Include="EVTurnout.aspx" />
+    <Content Include="Results_sp.aspx" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="ucloading.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ENR-BACKUP.aspx.designer.vb">
+      <DependentUpon>ENR-BACKUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR-BACKUP.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>ENR-BACKUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout_DataFile.aspx.designer.vb">
+      <DependentUpon>EVTurnout_DataFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout_DataFile.aspx.vb">
+      <DependentUpon>EVTurnout_DataFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENR_Web.aspx.designer.vb">
+      <DependentUpon>ENR_Web.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR_Web.aspx.vb">
+      <DependentUpon>ENR_Web.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENR_FIL.aspx.designer.vb">
+      <DependentUpon>ENR_FIL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR_FIL.aspx.vb">
+      <DependentUpon>ENR_FIL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EVTurnout_FIL.aspx.designer.vb">
+      <DependentUpon>EVTurnout_FIL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout_FIL.aspx.vb">
+      <DependentUpon>EVTurnout_FIL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENR_TV.aspx.designer.vb">
+      <DependentUpon>ENR_TV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR_TV.aspx.vb">
+      <DependentUpon>ENR_TV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENR.aspx.designer.vb">
+      <DependentUpon>ENR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR.aspx.vb">
+      <DependentUpon>ENR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENR_SP.aspx.designer.vb">
+      <DependentUpon>ENR_SP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENR_SP.aspx.vb">
+      <DependentUpon>ENR_SP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EV_TurnoutFiles.aspx.designer.vb">
+      <DependentUpon>EV_TurnoutFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EV_TurnoutFiles.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>EV_TurnoutFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results_pv.aspx.designer.vb">
+      <DependentUpon>Results_pv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results_pv.aspx.vb">
+      <DependentUpon>Results_pv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="graph.ascx.designer.vb">
+      <DependentUpon>graph.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="graph.ascx.vb">
+      <DependentUpon>graph.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateImage.aspx.designer.vb">
+      <DependentUpon>GenerateImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateImage.aspx.vb">
+      <DependentUpon>GenerateImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Results.aspx.designer.vb">
+      <DependentUpon>Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results.aspx.vb">
+      <DependentUpon>Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.vb">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout_SP.aspx.designer.vb">
+      <DependentUpon>EVTurnout_SP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout_SP.aspx.vb">
+      <DependentUpon>EVTurnout_SP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EVTurnout.aspx.designer.vb">
+      <DependentUpon>EVTurnout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EVTurnout.aspx.vb">
+      <DependentUpon>EVTurnout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Results_sp.aspx.designer.vb">
+      <DependentUpon>Results_sp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results_sp.aspx.vb">
+      <DependentUpon>Results_sp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SOV.aspx.designer.vb">
+      <DependentUpon>SOV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SOV.aspx.vb">
+      <DependentUpon>SOV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SOV_sp.aspx.designer.vb">
+      <DependentUpon>SOV_sp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SOV_sp.aspx.vb">
+      <DependentUpon>SOV_sp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucloading.ascx.designer.vb">
+      <DependentUpon>ucloading.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucloading.ascx.vb">
+      <DependentUpon>ucloading.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\bootstrap-theme.css.map" />
+    <None Include="css\bootstrap.css.map" />
+    <None Include="EV_Schedules\11S_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\02G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\02P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\03P_HEN_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\03P_LV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\03P_NLV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\04G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\04P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05G_BOU_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05G_HEN_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05G_LV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05G_MES_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05G_NLV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05P_HEN_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05P_LV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05P_MES_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\05P_NLV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\06G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\06P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\07G_BOU_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\07G_LV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\07G_MES_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\07G_NLV_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\07P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\08G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\08P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\09G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\09P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\10G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\10G_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\10P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\11G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\11G_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\11P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\11S_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\12P_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\12P_EV_SCHED_FIL.pdf" />
+    <None Include="EV_Schedules\12P_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\12S_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\12S_EV_SCHED_FIL.pdf" />
+    <None Include="EV_Schedules\12S_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\12W2_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\12W2_EV_SCHED_FIL.pdf" />
+    <None Include="EV_Schedules\12W2_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\13G_EV_SCHED.pdf" />
+    <None Include="EV_Schedules\13G_EV_SCHED_SP.pdf" />
+    <None Include="EV_Schedules\13P_EV_SCHED.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4229</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

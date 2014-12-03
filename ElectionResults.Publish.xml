@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\ccelweb03m\d$\inetpub\wwwroot\ElectionResults" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="\\ccelweb03m\d$\inetpub\wwwroot\ElectionResults" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/ru/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="Images/print_ver.gif" publishTime="05/15/2012 07:23:52" />
+    <file relUrl="ENR.aspx" publishTime="08/07/2013 07:52:54" />
+    <file relUrl="EVTurnout_SP.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="ENR_FIL.aspx" publishTime="08/07/2013 07:52:54" />
+    <file relUrl="bin/es/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/ElectionResults.pdb" publishTime="12/04/2013 14:11:17" />
+    <file relUrl="bin/hi/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="ENR_SP.aspx" publishTime="08/07/2013 07:52:54" />
+    <file relUrl="ENR-BACKUP.aspx" publishTime="08/07/2013 07:52:54" />
+    <file relUrl="EV_TurnoutFiles.aspx" publishTime="05/15/2013 15:15:50" />
+    <file relUrl="error.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="EVTurnout_DataFile.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="ENR_TV.aspx" publishTime="08/07/2013 07:52:54" />
+    <file relUrl="bin/AjaxControlToolkit.pdb" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/ElectionResults.xml" publishTime="12/04/2013 14:11:17" />
+    <file relUrl="bin/de/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="StyleSheet.css" publishTime="08/07/2013 07:52:57" />
+    <file relUrl="PrintStyle.css" publishTime="08/07/2013 07:52:56" />
+    <file relUrl="bin/ja/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="EVTurnout.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="Results_sp.aspx" publishTime="08/07/2013 07:52:56" />
+    <file relUrl="ucloading.ascx" publishTime="05/24/2013 07:35:29" />
+    <file relUrl="EVTurnout_FIL.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="bin/he/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="Results_pv.aspx" publishTime="08/07/2013 07:52:56" />
+    <file relUrl="StyleSheet_TV.css" publishTime="08/07/2013 07:52:57" />
+    <file relUrl="bin/nl/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/tr-TR/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="ENR_Web.aspx" publishTime="08/07/2013 07:52:55" />
+    <file relUrl="graph.ascx" publishTime="08/07/2013 07:52:56" />
+    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="Results.aspx" publishTime="08/07/2013 07:52:56" />
+    <file relUrl="Web.config" publishTime="12/04/2013 08:35:10" />
+    <file relUrl="bin/ElectionResults.dll" publishTime="12/04/2013 14:11:17" />
+    <file relUrl="Images/wait_animated.gif" publishTime="05/22/2013 09:41:01" />
+    <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="07/11/2006 22:43:56" />
+    <file relUrl="bin/ko/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="bin/pt/AjaxControlToolkit.resources.dll" publishTime="12/03/2013 13:38:32" />
+    <file relUrl="GenerateImage.aspx" publishTime="08/07/2013 07:52:56" />
+  </publishProfile>
+</publishData>

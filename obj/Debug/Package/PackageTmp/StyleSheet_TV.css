@@ -1,0 +1,17 @@
+﻿html,body {
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	background-color:Black;
+	color: #000000;
+	height:100%;
+	width:100%;
+	min-height:100%;
+	text-align:center;
+	font-weight:bold;
+	text-transform: none;
+	color:White;
+	font-family: Arial;
+	letter-spacing: normal;
+}
+
+

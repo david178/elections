@@ -1,0 +1,300 @@
+
+/* custom media queries */
+
+/* ---------------------------------------------- */
+/* 1200 and above (desktop) */
+
+@media (min-width: 1200px) {
+
+  /* h2 */
+  h2 {
+    width: 60% !important;
+
+  }
+
+  /* adjusting for the removal of the TOC */
+  .col-md-3 {
+
+    /* larger TOC well */
+    /*  width: 19%;  */
+
+    /* smaller TOC well */
+    /*  width: 15%; */
+    
+    
+    /* smallest TOC well */
+      width: 12%; 
+  }
+  
+  
+      /* adjusting table text for the size of browser */
+   /* .tableFontAdjust 
+    {
+        font-family: "Trebuchet MS";
+        font-size: 14px !important;
+    }  */
+    
+    .col-md-9 {
+width: 80%;
+} 
+    
+  
+  
+
+
+
+}
+/* ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- */
+/* between 992 and 1199 (small desktop) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* h2 */
+  h2 {
+
+    width: 60% !important;
+
+
+  }
+
+
+  /* adjusting for the removal of the TOC */
+  .col-md-3 {
+
+    /* larger TOC well */
+    /*  width: 19%;  */
+
+    /* smaller TOC well */
+   /*  width: 15%; */
+     
+         /* smallest TOC well */
+      width: 12%; 
+  }
+  
+  
+  
+      .col-md-9 {
+width: 80%;
+} 
+  
+  
+
+  
+  
+
+
+}
+/* ---------------------------------------------- */
+
+
+
+
+
+
+/* ---------------------------------------------- */
+/* between 768 and 991 (tablet) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* h2 */
+  h2 {
+    width: 350px !important;
+
+  }
+  
+    /* well & container adjust */
+  .well {
+  	margin-bottom: 12px;
+    height: 55px; 
+    border-radius: 0px;
+			
+    }
+    .col-md-3 {
+        padding-right: 0px;
+        padding-left: 0px;
+    
+    }
+    
+
+
+  
+
+  
+ 
+
+}
+/* ---------------------------------------------- */
+
+
+
+
+
+
+/* ---------------------------------------------- */
+/* under 767 (phone) */
+
+@media (max-width: 767px) {
+
+  /* navbar */
+  .navbar-default {
+
+    box-shadow: 0px 0px 0px;
+
+  }
+  
+  /* well & container adjust */
+    .well {
+  	margin-bottom: 12px;
+    height: 55px; 
+    border-radius: 0px;
+			
+    }
+    .col-md-3 {
+        padding-right: 0px;
+        padding-left: 0px;
+    
+    }
+    
+    
+ 
+    
+    
+
+ 
+
+
+  /* h2 */
+  h2
+  {
+    width: 100% !important;
+
+
+    position: relative;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 6px 20px 6px 71px;
+    margin: 30px 10px 10px -71px;
+
+
+
+    margin-left:-0px;
+
+    font-weight: normal;
+    font-size: 21px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+    font-family: "HelveticaNeueBoldCond", Arial, Helvetica, sans-serif;
+
+    background-color: #c70008;
+
+    -webkit-box-shadow: 0px 2px 4px #888;
+    -moz-box-shadow: 0px 2px 4px #888;
+    box-shadow: 0px 2px 4px #888;
+  }
+
+
+
+  h2:before, h2:after
+  {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  h2:before
+  {
+/*  width: 30px;
+  left: -30px;
+  top: 12px;
+  border-width: 20px 10px;
+  border-style: solid;
+  border-color: #999 #999 #999 transparent;*/
+
+/*                right: 0px;
+  top: 100%;
+  border-width: 5px 10px;
+  border-style: solid;
+  border-color: transparent transparent #7C0002 #7C0002;*/
+
+}
+
+h2.simple:before
+{
+  display: none;
+}
+
+h2.flag:before
+{
+  width: 0px;
+  left: auto;
+  right: -2px;
+  top: 0px;
+  border-color: transparent #fff transparent transparent;
+
+  display: none;
+}
+
+h2:after
+{
+/*                left: 0px;
+  top: 100%;
+  border-width: 5px 10px;
+  border-style: solid;
+  border-color: #7C0002 #7C0002 transparent transparent;
+
+  display: none;*/
+
+  /*                width: 0px;*/
+  right: auto;
+  left: -2px;
+  top: 0px;
+  border-color: #fff transparent transparent transparent;
+
+
+  /* added for simplicity */
+  display: none;
+
+}
+
+
+
+
+/* to stretch the tables end to end in mobile view to optimize space */
+.col-md-9 
+{
+
+  /* old */
+/*                padding-right: 15px;
+padding-left: 15px;*/
+
+/* new */
+padding-right: 0px;
+padding-left: 0px;
+
+
+}
+
+/* this will also need to be adjusted for easier edge reading */
+.headerAdjust
+{
+
+  margin-left:10px !important;
+}
+
+.footerAdjust
+{
+
+  margin-left:10px !important;
+
+}
+
+
+}
+/* ---------------------------------------------- */
